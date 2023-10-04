@@ -22,15 +22,15 @@ document.addEventListener('DOMContentLoaded', function () {
         .then(response => response.json())
         .then(data => {
             if (data.length > 0 && data[0] === "http://localhost:8080/home.html") {
-                alert('Login successful!'); // Display a success alert
+                alert('Login successful!');
                 window.location.href = data[0];
             } else {
-                alert('Login failed. Please check your credentials.'); // Display an error alert
+                alert('Login failed. Please check your credentials.');
             }
         })
         .catch(error => {
             console.error('Login error:', error);
-            alert('Login failed. An error occurred.'); // Display a generic error alert
+            alert('Login failed. An error occurred.');
         });
     });
 });

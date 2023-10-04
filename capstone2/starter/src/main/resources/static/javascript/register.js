@@ -22,17 +22,17 @@ document.addEventListener('DOMContentLoaded', function () {
         .then(response => response.json())
         .then(data => {
             if (data.length > 0 && data[0] === "http://localhost:8080/login.html") {
-                alert('Registration successful!'); // Display a success alert
+                alert('Registration successful!');
                 window.location.href = data[0];
             } else if (data.length > 0 && data[0] === "Username already exists") {
-                alert('Registration failed. Please choose a different username.'); // Display an error alert
+                alert('Registration failed. Please choose a different username.');
             } else {
-                alert('Registration failed. An error occurred.'); // Display a generic error alert
+                alert('Registration failed. An error occurred.');
             }
         })
         .catch(error => {
             console.error('Registration error:', error);
-            alert('Registration failed. An error occurred.'); // Display a generic error alert
+            alert('Registration failed. An error occurred.');
         });
     });
 });
